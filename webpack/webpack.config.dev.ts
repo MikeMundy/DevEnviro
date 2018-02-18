@@ -2,11 +2,12 @@ import * as webpack from "webpack";
 import * as path from 'path';
 import * as HtmlWebpackPlugin from "html-webpack-plugin";
 
-export default {
-  devtool: 'inline-source-map',
+const config: webpack.Configuration = {  
+
+  devtool: "inline-source-map",
 
   entry: {
-    'index': ['event-source-polyfill', 'react-hot-loader/patch', 'webpack-hot-middleware/client?reload=true', path.resolve(__dirname, 'src/index.tsx')],
+    'index': ['event-source-polyfill', 'react-hot-loader/patch', 'webpack-hot-middleware/client?reload=true', path.resolve(__dirname, '../src/index.tsx')],
   },
 
   target: 'web',
@@ -50,19 +51,13 @@ export default {
   ],
   module: {
     rules: [
-      { test: /\.css$/, loaders: ['style-loader', 'css-loader'] },
-      { test: /\.(png|jpg)$/, loader: 'url-loader' },
       { test: /\.(ts|tsx)$/, exclude: /node_modules/, loaders: ['react-hot-loader/webpack', 'awesome-typescript-loader'] },
-      {
-        test: /\.scss$/,
-        loaders: ["style-loader", "css-loader", "sass-loader"],
-        exclude: path.resolve(__dirname, 'src/app')
-      },
-      {
-        test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-        loader: 'file-loader?name=fonts/[name].[ext]'
-      },
+      { test:/\.(s*)css$/, loaders: ['style-loader','css-loader', 'sass-loader'] }, 
+      { test: /\.(png|jpg)$/, loader: 'url-loader' },
+      { test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/, loader: 'file-loader?name=fonts/[name].[ext]' },
     ]
   }
 
-};
+}
+
+export default config;

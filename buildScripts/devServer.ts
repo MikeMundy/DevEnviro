@@ -1,12 +1,12 @@
 //Set up an Express Web server.
 
 /* eslint-disable no-console */
-import * as express from 'express';
-import * as path from 'path';      // From Node, not NPM
-import * as open from 'open';      // From Node, not NPM
-import * as webpack from 'webpack';
-import * as bodyParser from 'body-parser';
-import config from '../webpack.config.dev';
+import * as express from "express";
+import * as path from "path";      // From Node, not NPM
+import * as open from "open";      // From Node, not NPM
+import * as webpack from "webpack";
+import * as bodyParser from "body-parser";
+import config from "../webpack/webpack.config.dev";
 
 const port = 3000;
 const app = express(); // Create an instance of Express.

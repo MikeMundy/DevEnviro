@@ -9,8 +9,13 @@
 * Follow the instructions in the script. It will install Git, Posh-Git, NodeJS and clone this repo into a folder.
 
 ## This Includes:
-* Git with Posh-Git for Powershell, GitFlow and GitHub
+* Git, Posh-Git for Powershell, GitFlow and GitHub
 * NodeJS
+* Webpack 2
+  * Dev build with hot reloading from Express server
+  * Distribution build with bundling and minification, with Express server
+* SCSS 
+* Supports all scripts in TypeScript (code files as well as build scripts).
 
 ## Git Flow Command Examples
 

@@ -110,6 +110,8 @@ show("Repository cloning completed.")
 # Swap to the subfolder where the git repo was created.
 cd $GitRepositoryLocalFolder
 
+npm install
+
 # Fetch and merge the develop branch so everything is up to date.
 git checkout develop
 git fetch
