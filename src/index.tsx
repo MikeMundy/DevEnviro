@@ -1,11 +1,13 @@
 import "./index.scss";
 import "./more.css";
 
-const message = "Hello World!!! This is my heading with more words";
+const message = "Hello World!";
 
 document.getElementById("heading").innerHTML = message;
 
 let t = 0;
+
+const x = 1;
 
 function showTime() {
     t++;
@@ -13,4 +15,3 @@ function showTime() {
 }
 
 setInterval( showTime, 1000);
-

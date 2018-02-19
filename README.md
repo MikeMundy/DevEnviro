@@ -15,7 +15,7 @@
   * Dev build with hot reloading from Express server
   * Distribution build with bundling and minification, with Express server
 * SCSS 
-* Supports all scripts in TypeScript (code files as well as build scripts).
+* TypeScript for all scripts (code files as well as build scripts) with linting via TSLint.
 
 ## Git Flow Command Examples
 
